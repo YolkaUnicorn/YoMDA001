@@ -12,14 +12,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var balanceLabel: UILabel?
     
     
-    var balance = 1111.11 {
+    var balance = 1111.1 {
         didSet {
             balanceLabel?.text = "\(balance)"
         }
     }
     
+    
+    
     func updateBalanceLabel () {
-        balanceLabel?.text = "\(balance)"
+        let formatter = NumberFormatter ()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = "₽"
+        
+        let number = NSNumber(value: balance)
+        
+        balanceLabel?.text = formatter.string(from: number)
     }
     
     override func viewDidLoad() {
