@@ -40,6 +40,9 @@
                             <constraint firstItem="yQl-AZ-Zuc" firstAttribute="centerX" secondItem="c88-oG-hoz" secondAttribute="centerX" id="u2D-pE-ZSh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="balanceLabel" destination="yQl-AZ-Zuc" id="gTo-1J-247"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

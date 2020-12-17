@@ -9,11 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var balanceLabel: UILabel?
+    
+    
+    var balance = 1111.11 {
+        didSet {
+            balanceLabel?.text = "\(balance)"
+        }
+    }
+    
+    func updateBalanceLabel () {
+        balanceLabel?.text = "\(balance)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        updateBalanceLabel()
+        
+//        balance += 0.01
+//        balanceLabel?.text = "\(balance)"
+//        balance += 0.01
+        
     }
-
+    
+    
 
 }
 
